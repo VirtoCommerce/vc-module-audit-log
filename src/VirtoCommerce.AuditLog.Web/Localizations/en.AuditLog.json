@@ -1,0 +1,28 @@
+{
+  "AuditLog": {
+    "blades": {
+      "hello-world": {
+        "title": "Hello world blade"
+      }
+    }
+  },
+  "permissions": {
+    "AuditLog:access": "Open AuditLog menu",
+    "AuditLog:create": "Create AuditLog related data",
+    "AuditLog:read": "View AuditLog related data",
+    "AuditLog:update": "Update AuditLog related data",
+    "AuditLog:delete": "Delete AuditLog related data"
+  },
+  "settings": {
+    "AuditLog": {
+      "AuditLogEnabled": {
+        "title": "AuditLog Enabled",
+        "description": "AuditLog Enabled setting"
+      },
+      "AuditLogPassword": {
+        "title": "AuditLog Password",
+        "description": "AuditLog Password setting"
+      }
+    }
+  }
+}

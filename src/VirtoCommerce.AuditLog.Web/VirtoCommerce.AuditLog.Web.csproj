@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+      <!-- Project is not a test project -->
+      <SonarQubeTestProject>false</SonarQubeTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VirtoCommerce.AuditLog.Core\VirtoCommerce.AuditLog.Core.csproj" />
+    <ProjectReference Include="..\VirtoCommerce.AuditLog.Data\VirtoCommerce.AuditLog.Data.csproj" />
+  </ItemGroup>
+
+</Project>

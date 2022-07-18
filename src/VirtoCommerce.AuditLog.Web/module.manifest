@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <id>VirtoCommerce.AuditLog</id>
+    <version>3.200.0</version>
+    <version-tag></version-tag>
+
+    <platformVersion>3.229.0</platformVersion>
+    <dependencies>
+        <!--<dependency id="VirtoCommerce.Core" version="3.200.0" />-->
+    </dependencies>
+
+    <title>VirtoCommerce AuditLog extension module</title>
+    <description>VirtoCommerce AuditLog extension module</description>
+
+    <authors>
+        <author>John Doe</author>
+    </authors>
+    <owners>
+        <owner>VirtoCommerce</owner>
+    </owners>
+
+    <projectUrl>https://github.com/VirtoCommerce/vc-module-audit-log</projectUrl>
+    <iconUrl>Modules/$(VirtoCommerce.AuditLog)/Content/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <assemblyFile>VirtoCommerce.AuditLog.Web.dll</assemblyFile>
+    <moduleType>VirtoCommerce.AuditLog.Web.Module, VirtoCommerce.AuditLog.Web</moduleType>
+
+    <releaseNotes>First version.</releaseNotes>
+    <copyright>Copyright © 2022 VirtoCommerce. All rights reserved</copyright>
+    <tags>extension module</tags>
+    <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
