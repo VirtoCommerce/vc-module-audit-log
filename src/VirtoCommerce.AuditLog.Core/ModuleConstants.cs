@@ -30,28 +30,20 @@ namespace VirtoCommerce.AuditLog.Core
         {
             public static class General
             {
-                public static SettingDescriptor AuditLogEnabled { get; } = new SettingDescriptor
+                public static SettingDescriptor AuditLogTrackingEvents { get; } = new SettingDescriptor
                 {
-                    Name = "AuditLog.AuditLogEnabled",
-                    GroupName = "AuditLog|General",
-                    ValueType = SettingValueType.Boolean,
-                    DefaultValue = false,
-                };
-
-                public static SettingDescriptor AuditLogPassword { get; } = new SettingDescriptor
-                {
-                    Name = "AuditLog.AuditLogPassword",
+                    Name = "AuditLog.AuditLogTrackingEvents",
                     GroupName = "AuditLog|Advanced",
-                    ValueType = SettingValueType.SecureString,
-                    DefaultValue = "qwerty",
+                    ValueType = SettingValueType.LongText,
+                    RestartRequired = true,
+                    IsHidden = true,
                 };
 
                 public static IEnumerable<SettingDescriptor> AllGeneralSettings
                 {
                     get
                     {
-                        yield return AuditLogEnabled;
-                        yield return AuditLogPassword;
+                        yield return AuditLogTrackingEvents;
                     }
                 }
             }

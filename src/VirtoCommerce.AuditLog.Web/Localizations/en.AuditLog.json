@@ -1,8 +1,34 @@
 {
   "AuditLog": {
     "blades": {
-      "hello-world": {
-        "title": "Hello world blade"
+      "events": {
+        "title": "Events",
+        "labels": {
+          "active-events": "Active events",
+          "unactive-events": "Available events",
+          "name": "Name",
+          "no-active-events": "No active events",
+          "no-available-events": "No available events"
+        },
+        "buttons": {
+          "subscribe": "Subscribe",
+          "unsubscribe": "Unsubscribe"
+        }
+      },
+      "logs": {
+        "logs-details": {
+          "title": "Log details",
+          "subtitle": "Log details",
+          "operation-type": "Operation type",
+          "object-type": "Object type",
+          "object-id": "Object id",
+          "details": "Details"
+        }
+      }
+    },
+    "widgets": {
+      "auditLogRecord-fields": {
+        "title": "Changed fields"
       }
     }
   },
@@ -22,6 +48,10 @@
       "AuditLogPassword": {
         "title": "AuditLog Password",
         "description": "AuditLog Password setting"
+      },
+      "AuditLogTrackingEvents": {
+        "title": "Allowed Events",
+        "description": "List of allowed events"
       }
     }
   }

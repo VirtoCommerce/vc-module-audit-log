@@ -1,0 +1,26 @@
+<div class="blade-content">
+    <div class="blade-inner">
+        <div class="inner-block">
+            <div class="form form-group">
+                <label class="form-label">{{ 'AuditLog.blades.logs.logs-details.operation-type' | translate }}</label>
+                <div class="form-input">
+                    <input ng-model="blade.currentEntity.operationType" cols="30" rows="20" readonly />
+                </div>
+                <label class="form-label">{{ 'AuditLog.blades.logs.logs-details.object-type' | translate }}</label>
+                <div class="form-input">
+                    <input class="__large" ng-model="blade.currentEntity.objectType" cols="30" rows="20" readonly />
+                </div>
+                <label class="form-label">{{ 'AuditLog.blades.logs.logs-details.object-id' | translate }}</label>
+                <div class="form-input">
+                    <input ng-model="blade.currentEntity.objectId" cols="30" rows="20" readonly />
+                </div>
+                <label class="form-label">{{ 'AuditLog.blades.logs.logs-details.details' | translate }}</label>
+                <div class="form-input">
+                    <textarea class="__large" ng-model="blade.currentEntity.detail" cols="30" rows="20" readonly></textarea>
+                </div>
+            </div>
+
+            <va-widget-container group="auditLogRecordDetailsWidgets" blade="blade" gridster-opts="{columns: 4}"></va-widget-container>
+        </div>
+    </div>
+</div>

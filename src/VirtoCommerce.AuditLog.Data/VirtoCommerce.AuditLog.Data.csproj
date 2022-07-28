@@ -14,15 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Caching\" />
-    <Folder Include="ExportImport\" />
-    <Folder Include="Handlers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AutoCompare.Core" Version="1.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -1,0 +1,39 @@
+<div class="blade-content">
+    <div class="blade-inner">
+        <div class="inner-block">
+            <div class="sub-t">{{ 'AuditLog.blades.events.labels.active-events' | translate }}</div>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tbody>
+                        <tr class="table-item" ng-repeat="data in blade.activeEntities | orderBy:'name' track by data.name " ng-class="{'__selected': data.name === selectedNodeId}" context-menu data-target="rd_menu_{{$index}}">
+                            <td class="table-col">
+                                <div class="ui-grid-selection-row-header-buttons ui-grid-icon-ok" ng-class="{'ui-grid-row-selected': data.$selected}" ng-click="data.$selected = !data.$selected">&nbsp;</div>
+                            </td>
+                            <td class="table-col">
+                                <span class="table-t">{{data.name}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text no-data" ng-if="!blade.activeEntities.length">{{ 'AuditLog.blades.events.labels.no-active-events' | translate }}</p>
+            <div class="sub-t">{{ 'AuditLog.blades.events.labels.unactive-events' | translate }}</div>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tbody>
+                        <tr class="table-item" ng-repeat="data in blade.unActiveEntities | orderBy:'name' track by data.name " ng-class="{'__selected': data.name === selectedNodeId}" context-menu data-target="rd_menu_{{$index}}">
+                            <td class="table-col">
+                                <div class="ui-grid-selection-row-header-buttons ui-grid-icon-ok" ng-class="{'ui-grid-row-selected': data.$selected}" ng-click="data.$selected = !data.$selected">&nbsp;</div>
+                            </td>
+                            <td class="table-col">
+                                <span class="table-t">{{data.name}}</span>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text no-data" ng-if="!blade.unActiveEntities.length">{{ 'AuditLog.blades.events.labels.no-available-events' | translate }}</p>
+        </div>
+    </div>
+</div>

@@ -17,8 +17,8 @@ angular.module(moduleName, [])
                         function (bladeNavigationService) {
                             var newBlade = {
                                 id: 'blade1',
-                                controller: 'AuditLog.helloWorldController',
-                                template: 'Modules/$(VirtoCommerce.AuditLog)/Scripts/blades/hello-world.html',
+                                controller: 'AuditLog.mainController',
+                                template: 'Modules/$(VirtoCommerce.AuditLog)/Scripts/blades/audit-main.html',
                                 isClosingDisabled: true,
                             };
                             bladeNavigationService.showBlade(newBlade);
@@ -27,8 +27,8 @@ angular.module(moduleName, [])
                 });
         }
     ])
-    .run(['platformWebApp.mainMenuService', '$state',
-        function (mainMenuService, $state) {
+    .run(['platformWebApp.mainMenuService', '$state', 'platformWebApp.widgetService',
+        function (mainMenuService, $state, widgetService) {
             //Register module in main menu
             var menuItem = {
                 path: 'browse/AuditLog',
@@ -36,8 +36,15 @@ angular.module(moduleName, [])
                 title: 'AuditLog',
                 priority: 100,
                 action: function () { $state.go('workspace.AuditLogState'); },
-                permission: 'AuditLog:access',
+                
             };
             mainMenuService.addMenuItem(menuItem);
+
+            var auditLogRecordFieldsWidget = {
+                controller: 'AuditLog.auditLogRecordFieldsWidgetController',
+                template: 'Modules/$(VirtoCommerce.AuditLog)/Scripts/widgets/auditLogRecord-fields-widget.html'
+            };
+
+            widgetService.registerWidget(auditLogRecordFieldsWidget, 'auditLogRecordDetailsWidgets');
         }
     ]);
